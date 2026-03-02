@@ -304,9 +304,18 @@ export const ImageEditor: React.FC<ImageEditorProps> = ({ imageSrc, onCancel, on
 
                 {/* Rotation */}
                 <div className="space-y-2">
-                    <div className="flex justify-between text-xs font-medium text-white/50 uppercase tracking-wider">
+                    <div className="flex justify-between items-center text-xs font-medium text-white/50 uppercase tracking-wider">
                         <span className="flex items-center gap-1"><RotateCw className="w-3 h-3" /> Rotate</span>
-                        <span>{rotation}°</span>
+                        <div className="flex items-center gap-3">
+                            <button
+                                onClick={() => setRotation(r => (r + 90) % 360)}
+                                className="px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-[10px] text-white/90 transition-colors"
+                                title="Rotate 90 degrees clockwise"
+                            >
+                                +90°
+                            </button>
+                            <span>{rotation}°</span>
+                        </div>
                     </div>
                     <input
                         type="range"

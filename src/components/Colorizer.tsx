@@ -364,8 +364,10 @@ export const Colorizer: React.FC<ColorizerProps> = ({ id, file, serialNumber, ap
                         </div>
                     )}
                 </AnimatePresence>
+                <div className="absolute bottom-4 right-4 bg-black/40 backdrop-blur-[2px] text-white/90 text-2xl font-mono px-3 py-1.5 rounded-md pointer-events-none z-20 shadow-sm">
+                    #{serialNumber}
+                </div>
             </div>
-
             {/* Sidebar Controls */}
             <div className="w-full lg:w-80 shrink-0 flex flex-col h-full min-h-0 overflow-y-auto">
                 <div className="bg-card border border-border rounded-xl p-5 shadow-sm space-y-5">
